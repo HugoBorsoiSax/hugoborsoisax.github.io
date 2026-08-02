@@ -5,7 +5,7 @@ const modalStatus = document.getElementById('modalStatus');
 
 let pdfToDownload = ''; // guarda qual PDF liberar depois do envio
 
-document.querySelectorAll('.btn-download').forEach(button => {
+document.querySelectorAll('.download-card .btn-download').forEach(button => {
     button.addEventListener('click', () => {
         const product = button.dataset.product;
 
@@ -38,14 +38,21 @@ emailForm.addEventListener('submit', async (e) => {
         });
 
         if (response.ok) {
-            modalStatus.textContent = 'Enviado! Baixando seu PDF...';
-            setTimeout(() => {
-                window.location.href = pdfToDownload;
-                emailModal.classList.remove('active');
-                emailForm.reset();
-                modalStatus.textContent = '';
-            }, 1000);
-        } else {
+    modalStatus.textContent = 'Enviado! Baixando seu PDF...';
+    setTimeout(() => {
+        const link = document.createElement('a');
+        link.href = pdfToDownload;
+        link.download = 'jazz-licks-free.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        emailModal.classList.remove('active');
+        emailForm.reset();
+        modalStatus.textContent = '';
+    }, 1000);
+    
+    } else {
             modalStatus.textContent = 'Erro ao enviar. Tente novamente.';
         }
     } catch (error) {
