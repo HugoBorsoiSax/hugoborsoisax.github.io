@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hugo Borsoi Sax | Jazz Saxophone Resources</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🎷 Hugo Borsoi Sax
+    </div>
+
+    <nav>
+    <a href="#">Home</a>
+    <a href="#downloads">Downloads</a>
+    <a href="#">YouTube</a>
+    <a href="#about">About</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <h1>Learn Jazz. Practice Every Day.</h1>
+
+    <p>
+        Jazz licks, transcriptions, PDFs and play-alongs
+        for saxophone players.
+    </p>
+
+    <button>Download Free PDF</button>
+
+</section>
+<section class="downloads" id="downloads">
+
+    <h2>Free & Premium PDFs</h2>
+    <p class="downloads-subtitle">Escolha o material ideal para o seu nível</p>
+
+    <div class="downloads-grid">
+
+        <div class="download-card">
+            <img src="images/pdf-icon.png" alt="Free Jazz Licks PDF" class="download-icon">
+            <h3>10 Jazz Licks Essenciais</h3>
+            <p>Frases prontas para tocar sobre II-V-I</p>
+            <span class="price free">Grátis</span>
+            <button class="btn-download" data-product="jazz-licks-free">Baixar Grátis</button>
+        </div>
+
+        <div class="download-card">
+            <img src="images/pdf-icon.png" alt="Transcrições Premium" class="download-icon">
+            <h3>Transcrições Completas</h3>
+            <p>10 solos transcritos com áudio de referência</p>
+            <span class="price">R$ 29,90</span>
+            <button class="btn-download" data-product="transcricoes-premium">Comprar Agora</button>
+        </div>
+
+        <div class="download-card">
+            <img src="images/pdf-icon.png" alt="Play-Alongs" class="download-icon">
+            <h3>Pack de Play-Alongs</h3>
+            <p>15 backing tracks para praticar improvisação</p>
+            <span class="price">R$ 19,90</span>
+            <button class="btn-download" data-product="play-alongs">Comprar Agora</button>
+        </div>
+
+    </div>
+
+</section>
+<section class="about" id="about">
+
+    <div class="about-content">
+
+        <img src="images/hugo-borsoi.jpg" alt="Hugo Borsoi" class="about-photo">
+
+        <div class="about-text">
+            <h2>Sobre o Hugo Borsoi</h2>
+            <p>
+                Saxofonista, professor e criador de conteúdo sobre jazz e improvisação.
+                No meu canal do YouTube, ensino técnicas, licks e transcrições para
+                quem quer sair do básico e realmente tocar jazz com fluência.
+            </p>
+            <p>
+                Aqui você encontra material extra: PDFs, play-alongs e transcrições
+                completas para praticar no seu ritmo.
+            </p>
+
+            <a href="https://youtube.com/@SEU_CANAL" target="_blank" class="btn-youtube">
+                Ver no YouTube
+            </a>
+        </div>
+
+    </div>
+
+</section>
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            <span>🎷 Hugo Borsoi Sax</span>
+        </div>
+
+        <div class="footer-links">
+            <a href="#" target="_blank">YouTube</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="mailto:seuemail@exemplo.com">Contato</a>
+        </div>
+
+        <p class="footer-copy">&copy; 2026 Hugo Borsoi Sax. Todos os direitos reservados.</p>
+
+    </div>
+
+</footer>
+</body>
+<div class="modal-overlay" id="emailModal">
+    <div class="modal-box">
+        <button class="modal-close" id="closeModal">&times;</button>
+
+        <h3>Quase lá! 🎷</h3>
+        <p>Digite seu email para receber o PDF gratuito agora mesmo.</p>
+
+        <form id="emailForm">
+            <input type="email" id="emailInput" placeholder="seuemail@exemplo.com" required>
+            <button type="submit" class="btn-download">Enviar e Baixar</button>
+        </form>
+
+        <p class="modal-status" id="modalStatus"></p>
+    </div>
+</div>
+</html>
