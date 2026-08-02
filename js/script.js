@@ -52,3 +52,17 @@ emailForm.addEventListener('submit', async (e) => {
         modalStatus.textContent = 'Erro de conexão. Tente novamente.';
     }
 });
+
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Fecha o menu automaticamente ao clicar em um link
+document.querySelectorAll('#navMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
