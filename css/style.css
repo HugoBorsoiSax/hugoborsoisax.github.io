@@ -471,3 +471,26 @@ footer {
         padding: 25px 20px;
     }
 }
+
+.lang-switch {
+    display: flex;
+    gap: 6px;
+}
+
+.lang-switch button {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s ease;
+}
+
+.lang-switch button.active-lang {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+}
+

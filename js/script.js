@@ -66,3 +66,31 @@ document.querySelectorAll('#navMenu a').forEach(link => {
         navMenu.classList.remove('active');
     });
 });
+
+async function loadLanguage(lang) {
+    try {
+        const response = await fetch(`lang/${lang}.json`);
+        const translations = await response.json();
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[key]) {
+                el.textContent = translations[key];
+            }
+        });
+
+        document.getElementById('langPT').classList.toggle('active-lang', lang === 'pt');
+        document.getElementById('langEN').classList.toggle('active-lang', lang === 'en');
+
+        localStorage.setItem('preferredLang', lang);
+    } catch (error) {
+        console.error('Erro ao carregar idioma:', error);
+    }
+}
+
+document.getElementById('langPT').addEventListener('click', () => loadLanguage('pt'));
+document.getElementById('langEN').addEventListener('click', () => loadLanguage('en'));
+
+// Carrega o idioma salvo (ou português como padrão)
+const savedLang = localStorage.getItem('preferredLang') || 'pt';
+loadLanguage(savedLang);

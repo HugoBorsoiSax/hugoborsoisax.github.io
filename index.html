@@ -23,57 +23,62 @@
     </div>
 
     <button class="menu-toggle" id="menuToggle">☰</button>
-
+    
+    <div class="lang-switch">
+    <button id="langPT">PT</button>
+    <button id="langEN">EN</button>
+    </div>
+    
     <nav id="navMenu">
-        <a href="#">Home</a>
-        <a href="#downloads">Downloads</a>
-        <a href="#">YouTube</a>
-        <a href="#about">About</a>
+    <a href="#" data-i18n="nav_home">Home</a>
+    <a href="#downloads" data-i18n="nav_downloads">Downloads</a>
+    <a href="#" data-i18n="nav_youtube">YouTube</a>
+    <a href="#about" data-i18n="nav_about">About</a>
     </nav>
 
 </header>
 
 <section class="hero">
 
-    <h1>Learn Jazz. Practice Every Day.</h1>
+    <h1 data-i18n="hero_title">Learn Jazz. Practice Every Day.</h1>
 
-    <p>
-        Jazz licks, transcriptions, PDFs and play-alongs
-        for saxophone players.
+    <p data-i18n="hero_text">
+    Jazz licks, transcriptions, PDFs and play-alongs
+    for saxophone players.
     </p>
 
-    <button>Download Free PDF</button>
+    <button data-i18n="hero_button">Download Free PDF</button>
 
 </section>
 <section class="downloads" id="downloads">
 
-    <h2>Free & Premium PDFs</h2>
-    <p class="downloads-subtitle">Escolha o material ideal para o seu nível</p>
+    <h2 data-i18n="downloads_title">Free & Premium PDFs</h2>
+    <p class="downloads-subtitle" data-i18n="downloads_subtitle">Escolha o material ideal para o seu nível</p>
 
     <div class="downloads-grid">
 
         <div class="download-card">
             <span style="font-size: 40px;">📄</span> alt="Free Jazz Licks PDF" class="download-icon">
-            <h3>10 Jazz Licks Essenciais</h3>
-            <p>Frases prontas para tocar sobre II-V-I</p>
+           <h3 data-i18n="card1_title">10 Jazz Licks Essenciais</h3>
+            <p data-i18n="card1_text">Frases prontas para tocar sobre II-V-I</p>
             <span class="price free">Grátis</span>
-            <button class="btn-download" data-product="jazz-licks-free">Baixar Grátis</button>
+            <button class="btn-download" data-product="jazz-licks-free" data-i18n="card1_button">Baixar Grátis</button>
         </div>
 
         <div class="download-card">
             <span style="font-size: 40px;">📄</span> alt="Transcrições Premium" class="download-icon">
-            <h3>Transcrições Completas</h3>
-            <p>10 solos transcritos com áudio de referência</p>
+            <h3 data-i18n="card2_title">Transcrições Completas</h3>
+            <p data-i18n="card2_text">10 solos transcritos com áudio de referência</p>
             <span class="price">R$ 29,90</span>
-            <button class="btn-download" data-product="transcricoes-premium">Comprar Agora</button>
+            <button class="btn-download" data-product="transcricoes-premium" data-i18n="card2_button">Comprar Agora</button>
         </div>
 
         <div class="download-card">
             <span style="font-size: 40px;">📄</span> alt="Play-Alongs" class="download-icon">
-            <h3>Pack de Play-Alongs</h3>
-            <p>15 backing tracks para praticar improvisação</p>
+            <h3 data-i18n="card3_title">Pack de Play-Alongs</h3>
+            <p data-i18n="card3_text">15 backing tracks para praticar improvisação</p>
             <span class="price">R$ 19,90</span>
-            <button class="btn-download" data-product="play-alongs">Comprar Agora</button>
+            <button class="btn-download" data-product="play-alongs" data-i18n="card3_button">Comprar Agora</button>
         </div>
 
     </div>
@@ -86,18 +91,18 @@
         <img src="images/hugo-borsoi.jpg" alt="Hugo Borsoi" class="about-photo">
 
         <div class="about-text">
-            <h2>Sobre o Hugo Borsoi</h2>
-            <p>
+            <h2 data-i18n="about_title">Sobre o Hugo Borsoi</h2>
+            <p data-i18n="about_text1">
                 Saxofonista, professor e criador de conteúdo sobre jazz e improvisação.
                 No meu canal do YouTube, ensino técnicas, licks e transcrições para
                 quem quer sair do básico e realmente tocar jazz com fluência.
             </p>
-            <p>
+            <p data-i18n="about_text2">
                 Aqui você encontra material extra: PDFs, play-alongs e transcrições
                 completas para praticar no seu ritmo.
             </p>
 
-            <a href="https://www.youtube.com/@HugoBorsoiSax" target="_blank" class="btn-youtube">
+            <a href="https://www.youtube.com/@HugoBorsoiSax" target="_blank" class="btn-youtube" data-i18n="about_button">
                 Ver no YouTube
             </a>
         </div>
@@ -129,12 +134,12 @@
     <div class="modal-box">
         <button class="modal-close" id="closeModal">&times;</button>
 
-        <h3>Quase lá! 🎷</h3>
-        <p>Digite seu email para receber o PDF gratuito agora mesmo.</p>
+        <h3 data-i18n="modal_title">Quase lá! 🎷</h3>
+        <p data-i18n="modal_text">Digite seu email para receber o PDF gratuito agora mesmo.</p>
 
         <form id="emailForm">
             <input type="email" id="emailInput" placeholder="seuemail@exemplo.com" required>
-            <button type="submit" class="btn-download">Enviar e Baixar</button>
+            <button type="submit" class="btn-download" data-i18n="modal_button">Enviar e Baixar</button>
         </form>
 
         <p class="modal-status" id="modalStatus"></p>
