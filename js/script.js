@@ -5,17 +5,10 @@ const modalStatus = document.getElementById('modalStatus');
 
 let pdfToDownload = ''; // guarda qual PDF liberar depois do envio
 
-document.querySelectorAll('.download-card .btn-download').forEach(button => {
+document.querySelectorAll('.pricing-card .btn-download[data-product="jazz-licks-free"]').forEach(button => {
     button.addEventListener('click', () => {
-        const product = button.dataset.product;
-
-        if (product === 'jazz-licks-free') {
-            pdfToDownload = 'pdf/jazz-licks-free.pdf';
-            emailModal.classList.add('active');
-        } else {
-            // Produtos pagos vão direto pro link de pagamento
-            window.location.href = 'https://seu-link-de-pagamento.com/' + product;
-        }
+        pdfToDownload = 'pdf/jazz-licks-free.pdf';
+        emailModal.classList.add('active');
     });
 });
 
