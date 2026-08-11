@@ -656,3 +656,17 @@ footer {
     margin-bottom: 6px;
 }
 
+.hero-cta {
+    display: inline-block;
+    background-color: #e0a716;
+    color: #111;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.hero-cta:hover {
+    background-color: #c99311;
+}
