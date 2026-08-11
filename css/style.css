@@ -594,3 +594,65 @@ footer {
     border-radius: 4px;
     text-transform: uppercase;
 }
+
+.pix-box {
+    max-width: 420px;
+}
+
+.pix-qrcode {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.pix-label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.pix-key-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+}
+
+.pix-key-box span {
+    font-size: 0.8rem;
+    color: #333;
+    word-break: break-all;
+    text-align: left;
+}
+
+.pix-key-box button {
+    background-color: #2dd4bf;
+    color: #003c36;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.pix-instructions {
+    background-color: #fff8e6;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.pix-instructions p {
+    margin-bottom: 6px;
+}
+
